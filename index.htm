@@ -283,7 +283,7 @@ If an investment opportunity promises extremely high returns with little to no r
 			<div class="row faq-item d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
 				<div class="col-lg-5">
 					<i class="ri-question-line"></i>
-						<h4> compile from source code: <br>just cope the commonds one ling by one ling from the right</h4>
+						<h4> compile from source code: <br>just cope the commonds line  by line from the right code box</h4>
 				</div>
 				<!--- code --->
 				<div class="col-lg-7">
@@ -338,10 +338,76 @@ in-peers=1000
 					</div>
 						
 				</div>
-			</div>	<!-- End comfig-file Item-->
+			</div>	<!-- End config-file Item-->
 		</div>
     </section>
 	<!-- ======End build Section ===== -->
+	
+		<!-- ======= build Section ======= -->
+	<section id="Build" class="faq">
+		<div class="container">
+			
+			<div class="section-title aos-init aos-animate" data-aos="fade-up">
+				<h2>Build Your Own Monero-Classic V3.0 Node</h2>
+			</div><!-- =====end of title of Build ===== -->
+			
+			<!-- =====OS Item======-->
+			<div class="row faq-item d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+				<div class="col-lg-5">
+					<i class="ri-question-line"></i>
+					<h4> operation system: </h4>
+				</div>
+          
+				<div class="col-lg-7">
+					<p> 
+						ubuntu 20.04
+					</p> 
+				</div>
+			</div>	<!-- End OS		Item-->
+			
+			<!--======compile section=======-->
+			<div class="row faq-item d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+				<div class="col-lg-5">
+					<i class="ri-question-line"></i>
+						<h4> compile from source code: <br>just cope the commonds line by line from the right code box</h4>
+				</div>
+				<!--- code --->
+				<div class="col-lg-7">
+					<div class="center">
+<p><pre><code>
+sudo apt update && sudo apt install git build-essential cmake pkg-config libssl-dev libzmq3-dev libunbound-dev libsodium-dev libunwind8-dev liblzma-dev libreadline6-dev libexpat1-dev libpgm-dev qttools5-dev-tools libhidapi-dev libusb-1.0-0-dev libprotobuf-dev protobuf-compiler libudev-dev libboost-chrono-dev libboost-date-time-dev libboost-filesystem-dev libboost-locale-dev libboost-program-options-dev libboost-regex-dev libboost-serialization-dev libboost-system-dev libboost-thread-dev python3 ccache doxygen graphviz -y
+</code></pre></p>		
+
+<p><pre><code>
+sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake . && sudo make
+sudo mv lib/libg* /usr/lib/
+cd ~
+</code></pre></p>
+
+<p><pre><code>
+git clone --recursive https://github.com/monero-classic-lab/monero-classic-v3.git
+cd monero-classic-v3 && git submodule init && git submodule update
+make
+</code></pre></p>
+
+<p><pre><code>
+cd build/Linux/main/release//bin
+./moneroclassicd --confirm-external-bind --detach --detach
+</code></pre></p>
+
+<p><pre><code>
+tail -f ~/.bitmoneroclassic/bitmoneroclassic.log
+</code></pre></p>
+	
+
+				 
+					</div>
+				</div> 
+				<!---End of code --->
+			</div><!-- End compile Item-->
+		</div>
+    </section>			
+			
 	
 	<!-- ======= wallt Section ======= -->
 	<section id="wallet" class="faq">
@@ -365,11 +431,12 @@ in-peers=1000
 
 			<div class="col-lg-7">
 				<div class="center">
-					<pre> <code>
+					<p><pre> <code>
 ./moneroclassic-wallet-cli --generate-from-keys New_Wallet_Name
-					</code></pre> 
+					</code></pre> </p>
 					<p>Next, you'll be asked for the Address, the spendkey, the viewkey, and finally the new password for the re-generated wallet.Running this with the correct parameters will re-generate your wallet files for you and allow you to set a new password.
 					</p>
+					</div>
 				</div>
 			</div>
 		</div>
