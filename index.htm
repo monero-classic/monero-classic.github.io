@@ -353,7 +353,7 @@ in-peers=1000
 		<div class="container">
 			
 			<div class="section-title aos-init aos-animate" data-aos="fade-up">
-				<h2>Build Your Own Monero-Classic V3.0 Node</h2>
+				<h2>Build Your Own Monero-Classic V4.0 Node</h2>
 			</div><!-- =====end of title of Build ===== -->
 			
 			<!-- =====OS Item======-->
@@ -390,13 +390,15 @@ cd ~
 </code></pre></p>
 
 <p><pre><code>
-git clone --recursive https://github.com/monero-classic-lab/monero-classic-v3.git
-cd monero-classic-v3 && git submodule init && git submodule update
+git clone --recursive https://github.com/monero-classic-lab/monero-classic-v4.git
+cd monero-classic-v4 && git submodule init && git submodule update
+mkdir build ; cd build
+cmake .. -DMANUAL_SUBMODULES=1
 make
 </code></pre></p>
 
 <p><pre><code>
-cd build/Linux/main/release//bin
+cd build/bin
 ./moneroclassicd --confirm-external-bind --detach
 </code></pre></p>
 
